@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 import { motion } from "motion/react";
@@ -30,10 +31,10 @@ const ProjectDialog = ({
           >
             <XMark />
           </button>
-          <img
+          <Image
             src={selectedProject.image.url}
-            width={300}
-            height={300}
+            width={1200}
+            height={600}
             alt={selectedProject.title}
             className="w-full h-full aspect-video md:aspect-[12/6] object-cover object-center"
           />
@@ -59,12 +60,7 @@ const ProjectDialog = ({
                 </span>
               ))}
             </div>
-            <p className="text-white/50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium, tempora. Officiis eveniet harum nemo sed sint
-              distinctio fugiat earum cumque aliquid in magnam nam odio
-              molestias architecto veniam, asperiores voluptates?
-            </p>
+            <p className="text-white/50">{selectedProject.description}</p>
           </div>
         </div>
       </div>

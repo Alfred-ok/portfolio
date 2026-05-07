@@ -1,6 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction, useState } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 import { About as IAbout, Timeline } from "../utils/interface";
@@ -54,7 +55,7 @@ const About = ({ about, timeline }: AboutProps) => {
       <div className="relative">
         <div className="sticky top-6">
           <Transition>
-            <img
+            <Image
               src={about.avatar.url}
               width={400}
               height={400}
